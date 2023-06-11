@@ -41,17 +41,21 @@ let variableExpression = (a, b) => {
   //   return a - b;
   console.log(a - b);
 };
+
+// arrow function satu baris bisa ditulis dengan cara
+// let variableExpression = (a, b) => console.log(a - b);
+
 variableExpression(25, 5);
 // console.log(variableExpression(25, 5));
 
 // Callback Function
 function lingkaranSempurna(callback) {
   console.log("Lingkaran dibuat");
-  callback();
+  callback("Hijau");
 }
 
-function warnaLingkaran() {
-  console.log("Lingkaran terwarnai");
+function warnaLingkaran(warna) {
+  console.log("Lingkaran berwarna " + warna);
 }
 
 lingkaranSempurna(warnaLingkaran);
