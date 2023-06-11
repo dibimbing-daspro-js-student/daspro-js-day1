@@ -1,7 +1,7 @@
 // Functions
 
 // Fungsi greet
-function greet(name) { 
+function greet(name) {
   console.log("Hello there " + name);
 }
 
@@ -20,6 +20,7 @@ console.log(x);
 console.log(hasilTambah);
 
 // Fungsi perkalian
+// Function Declaration dimana bentuk fungsi ini bisa dipanggil sebelum fungsi tersebut dideklarasikan
 function perkalian(a, b) {
   console.log(a);
   return a * b;
@@ -27,3 +28,30 @@ function perkalian(a, b) {
 
 let y = perkalian(10, 5);
 console.log(y);
+
+// Function Expressions dimana fungsi ini dimasukkan kedalam variable,
+// lalu variable tersebut akan dipanggil setelah function dideklarasikan sehingga tidak akan terjadi ambiguitas kode
+// Rekommended
+
+// let variableExpression = function (a, b) {
+//   return a - b;
+// };
+
+let variableExpression = (a, b) => {
+  //   return a - b;
+  console.log(a - b);
+};
+variableExpression(25, 5);
+// console.log(variableExpression(25, 5));
+
+// Callback Function
+function lingkaranSempurna(callback) {
+  console.log("Lingkaran dibuat");
+  callback();
+}
+
+function warnaLingkaran() {
+  console.log("Lingkaran terwarnai");
+}
+
+lingkaranSempurna(warnaLingkaran);
